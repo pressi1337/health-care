@@ -3,8 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ChatBot - ML",
-  description: "ChatBot - ML",
+  title: "Health CareChat - ML",
+  description: "Health CareChat - ML",
 };
 
 export default function RootLayout({
