@@ -13,13 +13,13 @@ import useChat from "./useChat";
 
 export default function ChatBot() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const { message, ChatAlg } = useChat();
+  const { message, ChatAlg, setInitial, setMessage } = useChat();
 
   useEffect(() => {
-    // Scroll to the bottom when the message array changes
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [message]);
 
+  console.log({ message });
   return (
     <div className="flex h-screen antialiased text-gray-800 bg-[#EDF2F7] ">
       <div className="flex flex-row h-full w-full md:px-16">
@@ -39,19 +39,28 @@ export default function ChatBot() {
                   <div className="col-start-1 col-end-13 flex justify-center gap-3">
                     <button
                       disabled={message.length}
-                      onClick={() => ChatAlg("heart_disease_01")}
+                      onClick={() => ChatAlg("infection_disease_1")}
                     >
-                      <OptionsButton text=" Prediction of Heart Disease">
+                      <OptionsButton text=" Prediction of infectious Disease">
+                        🦠
+                      </OptionsButton>
+                    </button>
+                    <button
+                      disabled={message.length}
+                      onClick={() => ChatAlg("chronic_disease_1")}
+                    >
+                      <OptionsButton text=" Prediction of chronic Disease">
                         <HeartDiseaseIcon />
                       </OptionsButton>
                     </button>
-
-                    <OptionsButton text=" Prediction of infectious Disease">
-                      <HeartDiseaseIcon />
-                    </OptionsButton>
-                    <OptionsButton text=" Prediction of chronic Disease">
-                      <HeartDiseaseIcon />
-                    </OptionsButton>
+                    <button
+                      disabled={message.length}
+                      onClick={() => ChatAlg("heart_disease_1")}
+                    >
+                      <OptionsButton text=" Prediction of Heart Disease">
+                        🫀
+                      </OptionsButton>
+                    </button>
                   </div>
 
                   {message.map((element: any) =>
@@ -59,6 +68,15 @@ export default function ChatBot() {
                       <LeftMessage
                         message={element.message.text}
                         AvatarName="BOT"
+                        loading={element?.message?.loading ?? false}
+                        output={element?.message?.output ?? false}
+                        Remedies={element?.message?.Remedies ?? []}
+                        foods={element?.message?.foods ?? []}
+                        doctors={element?.message?.doctors ?? []}
+                        onContinue={() => {
+                          setMessage([]);
+                          setInitial(true);
+                        }}
                       />
                     ) : element?.placement == "rightQA" ? (
                       <RightQAMessage
@@ -67,9 +85,11 @@ export default function ChatBot() {
                         code={element.message.key}
                         onClick={ChatAlg}
                         submitted={element.message.submited}
+                        name={element.message.name}
                         prediction={element.message.prediction}
                         inputType={element.message.inputType ?? "text"}
                         options={element.message.options ?? []}
+                        validator={element.message.validator}
                       />
                     ) : (
                       <RightMessage

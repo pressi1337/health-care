@@ -11,13 +11,23 @@ export default function RightQAMessage({
   prediction = false,
   inputType = "select",
   options = [],
-}) {
+  validator = {},
+  name = "name",
+}: any) {
   const [values, setValues] = useState(value);
   const [error, setError] = useState("");
 
   const handleSubmit = () => {
-    console.log({ code, message });
-    onClick(code, values);
+    const { error } = validator?.validate(
+      { [name]: values },
+      { abortEarly: false }
+    );
+
+    if (error) {
+      setError(error.message);
+    } else {
+      onClick(code, values);
+    }
   };
 
   return (
@@ -31,7 +41,10 @@ export default function RightQAMessage({
               <input
                 type="text"
                 value={values}
-                onChange={(e: any) => setValues(e.target.value)}
+                onChange={(e: any) => {
+                  setError("");
+                  setValues(e.target.value);
+                }}
                 readOnly={submitted}
                 className="border-b-2 border-gray-400 focus:outline-none focus:border-indigo-500 appearance-none bg-transparent px-2 py-1"
               />
@@ -39,9 +52,15 @@ export default function RightQAMessage({
               <select
                 value={values}
                 disabled={submitted}
-                onChange={(e: any) => setValues(e.target.value)}
-                className=" border border-gray-300 text-gray-900 text-sm rounded-lg "
+                onChange={(e: any) => {
+                  setError("");
+                  setValues(e.target.value);
+                }}
+                className=" border border-gray-300 text-gray-900 text-sm rounded-lg max-w-52"
               >
+                <option value="" disabled selected>
+                  select...
+                </option>
                 {options.map((item: any) => (
                   <option selected={item === values}>{item}</option>
                 ))}
@@ -49,7 +68,8 @@ export default function RightQAMessage({
             )}
             ?
           </div>
-          {/* <p className="text-red-800 text-right">Required *</p> */}
+
+          {error && <p className="text-red-800 text-right">{error}</p>}
         </div>
       </div>
       <div className="flex items-center justify-start flex-row-reverse">
