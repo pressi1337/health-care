@@ -2021,7 +2021,7 @@ const useChat = () => {
                                 ...item.message,
                                 submited: true,
                                 loading: false,
-                                ...disease_prediction_output[resp.predicted_disease ?? '']
+                                ...(disease_prediction_output[resp.predicted_disease ?? ''] ?? disease_prediction_output['Allergy'])
                             }
                         };
                     }
@@ -2049,7 +2049,7 @@ const useChat = () => {
                                 ...item.message,
                                 submited: true,
                                 loading: false,
-                                ...disease_prediction_output[resp.predicted_disease ?? '']
+                                ...(disease_prediction_output[resp.predicted_disease ?? ''] ?? disease_prediction_output['Arthritis'])
                             }
                         };
                     }
