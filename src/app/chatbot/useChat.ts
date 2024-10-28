@@ -130,7 +130,7 @@ const disease: any = {
             }
         },
 
-        infection_disease_31: {
+        infection_disease_21: {
             message: {
                 text: ``,
                 value: '',
@@ -138,7 +138,7 @@ const disease: any = {
                 output: true
             }
         },
-        chronic_disease_49: {
+        chronic_disease_31: {
             message: {
                 text: ``,
                 value: '',
@@ -329,114 +329,7 @@ const disease: any = {
                 "value": ""
             }
         },
-        "chronic_disease_31": {
-            "message": {
-                "text": "Do you have fast heart rate?",
-                "value": ""
-            }
-        },
-        "chronic_disease_32": {
-            "message": {
-                "text": "Do you experience excessive hunger?",
-                "value": ""
-            }
-        },
-        "chronic_disease_33": {
-            "message": {
-                "text": "Do you have muscle weakness?",
-                "value": ""
-            }
-        },
-        "chronic_disease_34": {
-            "message": {
-                "text": "Do you have headaches?",
-                "value": ""
-            }
-        },
-        "chronic_disease_35": {
-            "message": {
-                "text": "Do you experience nausea?",
-                "value": ""
-            }
-        },
-        "chronic_disease_36": {
-            "message": {
-                "text": "Do you have blurred and distorted vision?",
-                "value": ""
-            }
-        },
-        "chronic_disease_37": {
-            "message": {
-                "text": "Do you experience drying and tingling lips?",
-                "value": ""
-            }
-        },
-        "chronic_disease_38": {
-            "message": {
-                "text": "Do you have slurred speech?",
-                "value": ""
-            }
-        },
-        "chronic_disease_39": {
-            "message": {
-                "text": "Do you experience palpitations?",
-                "value": ""
-            }
-        },
-        "chronic_disease_40": {
-            "message": {
-                "text": "Do you have joint pain?",
-                "value": ""
-            }
-        },
-        "chronic_disease_41": {
-            "message": {
-                "text": "Do you have neck pain?",
-                "value": ""
-            }
-        },
-        "chronic_disease_42": {
-            "message": {
-                "text": "Do you have knee pain?",
-                "value": ""
-            }
-        },
-        "chronic_disease_43": {
-            "message": {
-                "text": "Do you have hip joint pain?",
-                "value": ""
-            }
-        },
-        "chronic_disease_44": {
-            "message": {
-                "text": "Do you experience swelling of the joints?",
-                "value": ""
-            }
-        },
-        "chronic_disease_45": {
-            "message": {
-                "text": "Do you have painful walking?",
-                "value": ""
-            }
-        },
-        "chronic_disease_46": {
-            "message": {
-                "text": "Do you experience muscle weakness?",
-                "value": ""
-            }
-        },
-        "chronic_disease_47": {
-            "message": {
-                "text": "Do you have a stiff neck?",
-                "value": ""
-            }
-        },
-        "chronic_disease_48": {
-            "message": {
-                "text": "Do you experience movement stiffness?",
-                "value": ""
-            }
-        },
+
 
 
         // Infection Disease
@@ -557,66 +450,6 @@ const disease: any = {
             }
         },
         "infection_disease_20": {
-            "message": {
-                "text": "Do you have headaches?",
-                "value": ""
-            }
-        },
-        "infection_disease_21": {
-            "message": {
-                "text": "Do you experience loss of appetite?",
-                "value": ""
-            }
-        },
-        "infection_disease_22": {
-            "message": {
-                "text": "Do you have a stiff neck?",
-                "value": ""
-            }
-        },
-        "infection_disease_23": {
-            "message": {
-                "text": "Do you feel dizzy?",
-                "value": ""
-            }
-        },
-        "infection_disease_24": {
-            "message": {
-                "text": "Do you have blurred and distorted vision?",
-                "value": ""
-            }
-        },
-        "infection_disease_25": {
-            "message": {
-                "text": "Do you feel lethargic?",
-                "value": ""
-            }
-        },
-        "infection_disease_26": {
-            "message": {
-                "text": "Do you have muscle pain?",
-                "value": ""
-            }
-        },
-        "infection_disease_27": {
-            "message": {
-                "text": "Do you have swelling of lymph nodes?",
-                "value": ""
-            }
-        },
-        "infection_disease_28": {
-            "message": {
-                "text": "Do you have red spots over your body?",
-                "value": ""
-            }
-        },
-        "infection_disease_29": {
-            "message": {
-                "text": "Do you have dark urine?",
-                "value": ""
-            }
-        },
-        "infection_disease_30": {
             "message": {
                 "text": "Do you experience malaise?",
                 "value": ""
@@ -1048,7 +881,7 @@ const disease: any = {
                 "value": "",
                 "key": "infection_disease_21",
                 "submitted": false,
-                "prediction": false,
+                "prediction": true,
                 "inputType": "select",
                 "options": ["Yes", "No"],
                 "validator": Joi.object({
@@ -1056,156 +889,7 @@ const disease: any = {
                 })
             }
         },
-        "infection_disease_21": {
-            "message": {
-                "text": "",
-                "name": "yellowing_of_eyes",
-                "value": "",
-                "key": "infection_disease_22",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    yellowing_of_eyes: Joi.string().required(),
-                })
-            }
-        },
-        "infection_disease_22": {
-            "message": {
-                "text": "",
-                "name": "muscle_wasting",
-                "value": "",
-                "key": "infection_disease_23",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    muscle_wasting: Joi.string().required(),
-                })
-            }
-        },
-        "infection_disease_23": {
-            "message": {
-                "text": "",
-                "name": "patches_in_throat",
-                "value": "",
-                "key": "infection_disease_24",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    patches_in_throat: Joi.string().required(),
-                })
-            }
-        },
-        "infection_disease_24": {
-            "message": {
-                "text": "",
-                "name": "high_fever",
-                "value": "",
-                "key": "infection_disease_25",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    high_fever: Joi.string().required(),
-                })
-            }
-        },
-        "infection_disease_25": {
-            "message": {
-                "text": "",
-                "name": "extra_marital_contacts",
-                "value": "",
-                "key": "infection_disease_26",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    extra_marital_contacts: Joi.string().required(),
-                })
-            }
-        },
-        "infection_disease_26": {
-            "message": {
-                "text": "",
-                "name": "muscle_pain",
-                "value": "",
-                "key": "infection_disease_27",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    muscle_pain: Joi.string().required(),
-                })
-            }
-        },
-        "infection_disease_27": {
-            "message": {
-                "text": "",
-                "name": "swelling_of_lymph_nodes",
-                "value": "",
-                "key": "infection_disease_28",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    swelling_of_lymph_nodes: Joi.string().required(),
-                })
-            }
-        },
-        "infection_disease_28": {
-            "message": {
-                "text": "",
-                "name": "red_spots_over_body",
-                "value": "",
-                "key": "infection_disease_29",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    red_spots_over_body: Joi.string().required(),
-                })
-            }
-        },
-        "infection_disease_29": {
-            "message": {
-                "text": "",
-                "name": "dark_urine",
-                "value": "",
-                "key": "infection_disease_30",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    dark_urine: Joi.string().required(),
-                })
-            }
-        },
-        "infection_disease_30": {
-            "message": {
-                "text": "",
-                "name": "malaise",
-                "value": "",
-                "key": "infection_disease_31",
-                "submitted": false,
-                "prediction": true,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    malaise: Joi.string().required(),
-                })
-            }
-        },
+
 
 
         "chronic_disease_1": {
@@ -1650,7 +1334,7 @@ const disease: any = {
                 "value": "",
                 "key": "chronic_disease_31",
                 "submitted": false,
-                "prediction": false,
+                "prediction": true,
                 "inputType": "select",
                 "options": ["Yes", "No"],
                 "validator": Joi.object({
@@ -1658,276 +1342,6 @@ const disease: any = {
                 })
             }
         },
-        "chronic_disease_31": {
-            "message": {
-                "text": "",
-                "name": "dry_mouth",
-                "value": "",
-                "key": "chronic_disease_32",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    dry_mouth: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_32": {
-            "message": {
-                "text": "",
-                "name": "difficulty_swallowing",
-                "value": "",
-                "key": "chronic_disease_33",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    difficulty_swallowing: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_33": {
-            "message": {
-                "text": "",
-                "name": "frequent_headaches",
-                "value": "",
-                "key": "chronic_disease_34",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    frequent_headaches: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_34": {
-            "message": {
-                "text": "",
-                "name": "muscle_weakness",
-                "value": "",
-                "key": "chronic_disease_35",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    muscle_weakness: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_35": {
-            "message": {
-                "text": "",
-                "name": "nausea",
-                "value": "",
-                "key": "chronic_disease_36",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    nausea: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_36": {
-            "message": {
-                "text": "",
-                "name": "ringing_in_ears",
-                "value": "",
-                "key": "chronic_disease_37",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    ringing_in_ears: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_37": {
-            "message": {
-                "text": "",
-                "name": "thinning_hair",
-                "value": "",
-                "key": "chronic_disease_38",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    thinning_hair: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_38": {
-            "message": {
-                "text": "",
-                "name": "sensitivity_to_sunlight",
-                "value": "",
-                "key": "chronic_disease_39",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    sensitivity_to_sunlight: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_39": {
-            "message": {
-                "text": "",
-                "name": "changes_in_appetite",
-                "value": "",
-                "key": "chronic_disease_40",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    changes_in_appetite: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_40": {
-            "message": {
-                "text": "",
-                "name": "joint_pain",
-                "value": "",
-                "key": "chronic_disease_41",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    joint_pain: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_41": {
-            "message": {
-                "text": "",
-                "name": "frequent_urination",
-                "value": "",
-                "key": "chronic_disease_42",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    frequent_urination: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_42": {
-            "message": {
-                "text": "",
-                "name": "pain_in_lower_back",
-                "value": "",
-                "key": "chronic_disease_43",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    pain_in_lower_back: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_43": {
-            "message": {
-                "text": "",
-                "name": "chronic_cough",
-                "value": "",
-                "key": "chronic_disease_44",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    chronic_cough: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_44": {
-            "message": {
-                "text": "",
-                "name": "chest_pain",
-                "value": "",
-                "key": "chronic_disease_45",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    chest_pain: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_45": {
-            "message": {
-                "text": "",
-                "name": "fatigue",
-                "value": "",
-                "key": "chronic_disease_46",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    fatigue: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_46": {
-            "message": {
-                "text": "",
-                "name": "swelling_in_legs",
-                "value": "",
-                "key": "chronic_disease_47",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    swelling_in_legs: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_47": {
-            "message": {
-                "text": "",
-                "name": "skin_rash",
-                "value": "",
-                "key": "chronic_disease_48",
-                "submitted": false,
-                "prediction": false,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    skin_rash: Joi.string().required()
-                })
-            }
-        },
-        "chronic_disease_48": {
-            "message": {
-                "text": "",
-                "name": "sleep_disorders",
-                "value": "",
-                "key": "chronic_disease_49",
-                "submitted": false,
-                "prediction": true,
-                "inputType": "select",
-                "options": ["Yes", "No"],
-                "validator": Joi.object({
-                    sleep_disorders: Joi.string().required()
-                })
-            }
-        }
 
 
 
@@ -2014,7 +1428,7 @@ const useChat = () => {
             setMessage((prev: any) => {
                 const updatedItems = prev.map((item: any) => {
 
-                    if (item.key === 'infection_disease_31' && item.placement === 'left') {
+                    if (item.key === 'infection_disease_21' && item.placement === 'left') {
                         return {
                             ...item,
                             message: {
@@ -2042,7 +1456,7 @@ const useChat = () => {
         }).then(res => res.json()).then(resp => {
             setMessage((prev: any) => {
                 const updatedItems = prev.map((item: any) => {
-                    if (item.key === 'chronic_disease_49' && item.placement === 'left') {
+                    if (item.key === 'chronic_disease_31' && item.placement === 'left') {
                         return {
                             ...item,
                             message: {
