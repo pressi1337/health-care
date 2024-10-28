@@ -30,7 +30,12 @@ export default function ChatBot() {
             </div>
             <div className="ml-2 font-bold text-2xl">Health CareChat</div>
           </div>
-          <div className="flex flex-col flex-auto  flex-shrink-0 rounded-2xl h-full  rounded-2xl bg-[#F7FAFC] p-4">
+          {/*start block  */}
+          <div className="relative flex flex-col flex-auto  flex-shrink-0 rounded-2xl h-full  rounded-2xl bg-[#F7FAFC] p-4">
+            {/* Background Emoji with Blur */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-10 text-[150px] pointer-events-none">
+              🩺
+            </div>
             <div className="flex flex-col h-full h-full overflow-x-auto  mb-4">
               <div className="flex flex-col h-full">
                 <div className="grid grid-cols-12 gap-y-2">
@@ -104,6 +109,7 @@ export default function ChatBot() {
               </div>
             </div>
           </div>
+          {/*end block  */}
         </div>
       </div>
     </div>
